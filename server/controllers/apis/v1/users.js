@@ -1,6 +1,6 @@
 const express = require('express');
 const userService = require('../../../services/v1/users/users');
-const authClientRequest = require('../../../middlewares/authGuard');
+const authClientRequest = require('../../../middlewares/authGaurd');
 
 let router = express.Router();
 

@@ -1,6 +1,6 @@
 const express = require('express');
 
-const authService = require('../../../services/v1/auth/ath');
+const authService = require('../../../services/v1/auth/auth');
 const validation = require('../../../middlewares/validation');
 let router = express.Router();
 router.post('/register', validation.validateRegistrationBody(), authService.register);

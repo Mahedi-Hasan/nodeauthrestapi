@@ -1,4 +1,4 @@
-const { body } = require('express-validator/check');
+const { body } = require('express-validator');
 const validateRegistrationBody = ()=>{
     return [
         body('name').exists().withMessage('Name field is required').isLength({min:3}).withMessage('Name must be greater than 3 letters'),

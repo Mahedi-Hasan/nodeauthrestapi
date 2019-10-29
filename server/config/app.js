@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-const expressValidator = require('express-validator');
+const expressValidator = require('express-validator/check');
 
 
 module.exports = function(){
@@ -21,7 +21,7 @@ module.exports = function(){
         server.use(bodyParser.urlencoded({
             extended: false
         }));
-        server.use(expressValidator());
+        // server.use(expressValidator());
 
         // connect database
 
