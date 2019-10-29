@@ -21,7 +21,7 @@ module.exports = function(){
         server.use(bodyParser.urlencoded({
             extended: false
         }));
-        // server.use(expressValidator());
+        server.use(expressValidator());
 
         // connect database
 
