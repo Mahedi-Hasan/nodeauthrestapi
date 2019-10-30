@@ -1,5 +1,5 @@
-const { body } = require('express-validator/check');
-const validateRegistrationBody = ()=>{
+const { body } = require('express-validator');
+const validateRegistrationBody = () =>{
     return [
         body('name').exists().withMessage('Name field is required').isLength({min:3}).withMessage('Name must be greater than 3 letters'),
         body('email').exists().withMessage('Email field is required').isEmail().withMessage('Email is invalid'),
@@ -19,3 +19,5 @@ module.exports = {
     validateRegistrationBody: validateRegistrationBody,
     validateLoginBody: validateLoginBody
 }
+
+
